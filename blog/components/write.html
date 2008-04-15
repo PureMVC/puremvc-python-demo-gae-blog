@@ -1,0 +1,21 @@
+<!--
+ PureMVC Python / Google App Demo - Blog
+ By Nathan Levesque <nathan.levesque@puremvc.org>
+ Copyright(c) 2008 Nathan Levesque, Some rights reserved.
+-->
+<html>
+	<body>
+		
+		{% if postAdded %}
+		<h3>Post successfully added.</h3>
+		<p><a href="/">Click here to return to the home page.</a></p>
+		{% else %}
+		<h1>Write a Post</h1>
+		<form action="/write" method="post">
+			<p>Title: <input type="text" name="title"/></p>
+			<p><textarea name="content" rows="5" cols="60"></textarea></p>
+			<p><input type="submit" value="Post"/></p>
+		</form>
+		{% endif %}
+	</body>
+</html>

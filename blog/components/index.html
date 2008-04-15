@@ -1,0 +1,16 @@
+<!--
+ PureMVC Python / Google App Demo - Blog
+ By Nathan Levesque <nathan.levesque@puremvc.org>
+ Copyright(c) 2008 Nathan Levesque, Some rights reserved.
+-->
+<html>
+	<body>
+		<h1>My Blog</h1>
+		<p><a href="/write">Write a Post</a></p>
+		{% for post in posts %}
+			<h2>{{ post.title }}</h2>
+			<h6>Posted on:{{ post.datetime }}</h6>
+			<p>{{ post.content }}</p>
+		{% endfor %}
+	</body>
+</html>
