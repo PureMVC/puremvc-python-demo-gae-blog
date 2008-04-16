@@ -25,7 +25,7 @@ class HomeStartupCommand(puremvc.patterns.command.SimpleCommand, puremvc.interfa
         def execute(self, note):
                 if self.facade.hasMediator(view.HomeMediator.NAME):
                         self.facade.removeMediator(view.HomeMediator.NAME)
-                setlf.facade.registerMediator(view.HomeMediator(note.getBody()))
+                self.facade.registerMediator(view.HomeMediator(note.getBody()))
 
 """
 Write Startup Command
