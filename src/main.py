@@ -96,7 +96,7 @@ class WriteHandler(webapp.RequestHandler):
                 self.facade.sendNotification(AppFacade.ADD_POST, 
                         [self.request.get('title'),
                          self.request.get('content')])
-                set.redirect("/")
+                self.redirect("/")
 
 """
 Handles a request for the edit page.
