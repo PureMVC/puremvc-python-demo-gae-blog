@@ -2,12 +2,25 @@
  By Nathan Levesque <nathan.levesque@puremvc.org>
  Copyright(c) 2008 Nathan Levesque, Some rights reserved.]
 --------------------------------------------------------------------------
-Release Date: 04/14/08
+Release Date: 04/16/08
     Platform: Python 2.5  
-     Version: 1 
-    Revision: 0
+     Version: 1.1
+    Revision: 1
       Author: Nathan Levesque <nathan.levesque@puremvc.org>
      License: Creative Commons Attribution 3.0 United States License
 --------------------------------------------------------------------------
 1.0 - Initial project, demonstrating the use of PureMVC Python with
       Google App Engine.
+1.1 - Commented the code and added the following:
+	* Edit post functionality, able to edit both post and title
+	* Delete post functionality, simply deletes a post based on the 
+	  key value in the query string.
+      Changed the following:
+	* In vo.PostVO changed datetime to use the auto_now=True parameter 
+	  instead of auto_now_add=True so that it updates when the post is edited
+	* Moved redirect functionality from the view.py Mediators into the 
+	  ResponseHandler classes in main.py because the view should not be 
+	  handling a state change.
+      Also, note that the current version of PureMVC Python is included, this 
+      is due to the nature of Google Apps that any libraries used must be 
+      included in the application folder.

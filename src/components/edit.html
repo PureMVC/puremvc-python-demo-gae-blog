@@ -1,0 +1,11 @@
+<html>
+	<body>
+		<h1>Edit a Post</h1>
+		<form action="/edit" method="post">
+			<input type="hidden" name="key" value="{{ post.key }}"
+			<p>Title: <input type="text" name="title" value="{{ post.title }}"/></p>
+			<p><textarea name="content" rows="5" cols="60">{{ post.content }}</textarea></p>
+			<p><input type="submit" value="Edit"/></p>
+		</form>
+	</body>
+</html>
